@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  dev:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    restart: always
+    #stdin_open: true
+    #tty: true
+    ports:
+      - '5173:5173'
